@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+winter = Category.create(category_name: "Winter")
+spring = Category.create(category_name: "Spring")
+summer = Category.create(category_name: "Summer")
+fall = Category.create(category_name: "Fall")
+indoor = Category.create(category_name: "Indoor")
+outdoor = Category.create(category_name: "Outdoor")
