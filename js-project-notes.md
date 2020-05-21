@@ -36,7 +36,7 @@ The application we will create during the project build series is a "Syllabus Sh
 
 **NOTE**: Remember to _**VERTICALLY**_ build your MVP! This means building out one model/feature at a time. DO NOT build out _all_ the models and controllers at the same time. This is the easiest way to get lost in your project very early. Read more about this [here](https://github.com/learn-co-students/js-spa-project-instructions-online-web-sp-000/blob/master/project-planning-tips.md#build-vertically-not-horizontallys).
 
-- [ ] 8. Build your models: `rails g model <your_model_name> name` 
+- [X] 8. Build your models: `rails g model <your_model_name> name` 
 example `rails g model Category category_name` 
 example for model holding the foreign key `rails g model Activity category:references` will generates an category_id column in the activities table and will modify the activities.rb model to add a belongs_to :category relationship.  This improves db query performance time.
 
@@ -49,6 +49,7 @@ example for model holding the foreign key `rails g model Activity category:refer
     - Add seed data for ONLY the model that you are working on.
     - Migrations
     - Then run `rails db:create && rails db:migrate`
+    - run `rails db:seed`
     - Associations - Do not declare the relationship just yet. This will cause errors.
         ***** Important! When using postgres for our database, we need to run rails db:create 
         before migrating. Make sure you don't skip that step *****
