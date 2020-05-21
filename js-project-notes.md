@@ -37,11 +37,36 @@ The application we will create during the project build series is a "Syllabus Sh
 **NOTE**: Remember to _**VERTICALLY**_ build your MVP! This means building out one model/feature at a time. DO NOT build out _all_ the models and controllers at the same time. This is the easiest way to get lost in your project very early. Read more about this [here](https://github.com/learn-co-students/js-spa-project-instructions-online-web-sp-000/blob/master/project-planning-tips.md#build-vertically-not-horizontallys).
 
 - [ ] 8. Build your models: `rails g model <your_model_name> name` 
-example `rails g model Category category_name`
+example `rails g model Category category_name` 
+example for model holding the foreign key `rails g model Activity category:references` will generates an category_id column in the activities table and will modify the activities.rb model to add a belongs_to :category relationship.  This improves db query performance time.
+
 (Make sure you capitalize the first letter of the model name!)
-    - Migrations
+    - Confirm model and migration
     - Model classes
-    - Associations
+        - for the model that has the belongs_to relationship(foreign key), use 
+        `rails g model Activity category:references` will generates an category_id column in the activities table and will modify the activity.rb model to add a belongs_to :category relationship.
+        - Because we're using PostGres we need to delete `null: false`, so this migration will be successful.
+    - Add seed data for ONLY the model that you are working on.
+    - Migrations
+    - Then run `rails db:create && rails db:migrate`
+    - Associations - Do not declare the relationship just yet. This will cause errors.
+    
+
+        ***** Important! When using postgres for our database, we need to run rails db:create 
+        before migrating. Make sure you don't skip that step *****
+
+Now that our model and table is setup, we should be able to create a new note in the console
+    - git add/commit/push
+        - go to github repo, click compare and merge request(green box)
+        - click create pull request
+
+        - click merge pull request & confirm merge
+        - click delete branch
+        - check that the merge took place correctly.
+        - in terminal, `git co master` Switch to branch master
+        - in terminal, `git pull` syncs local environment with github repo
+        (Be careful with `git pull` because it will override any code on your local)
+        - git branch - shows all of your branches
 - [ ] 9. Test your models and associations in the console
     - Create some seed data
     - Adjust migrations as needed
