@@ -59,7 +59,6 @@ Now that our model and table is setup, we should be able to create a new note in
     - git add/commit/push
         - go to github repo, click compare and merge request(green box)
         - click create pull request
-
         - click merge pull request & confirm merge
         - click delete branch
         - check that the merge took place correctly.
