@@ -64,14 +64,14 @@ example for model holding the foreign key `rails g model Activity category:refer
         - in terminal, `git pull` syncs local environment with github repo
         (Be careful with `git pull` because it will override any code on your local)
         - git branch - shows all of your branches
-- [ ] 9. Test your models and associations in the console
+- [X] 9. Test your models and associations in the console
     - Create some seed data
     - Adjust migrations as needed
 
 
 ### PART 2: Routes, Controllers, Serializers
 
-- [ ] 1. Routes
+- [X] 1. Routes
     - Implement _specific_ namespaced routes for _a_ controller **for MVP**
     - REMEMBER! We're _trying_ to build vertically.
 
@@ -79,7 +79,7 @@ example for model holding the foreign key `rails g model Activity category:refer
       Rails.application.routes.draw do
         namespace :api do
           namespace :v1 do
-            resources :syllabuses, only: [:index, :create]
+            resources :activities, only: [:index, :create]
           end
         end
       end
