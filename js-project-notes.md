@@ -88,7 +88,7 @@ example for model holding the foreign key `rails g model Activity category:refer
     - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see error
 
 
-- [ ] 2. Controllers
+- [X] 2. Controllers
     - In your console run: `rails g controller api/v1/<your controller_name>` (Make sure you capitalize and the first letter of the controller name!)
     - Build relevant routes for MVP (ex: `index` and `create`)
     - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see JSON data
