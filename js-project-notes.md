@@ -51,8 +51,8 @@ example for model holding the foreign key `rails g model Activity category:refer
     - Then run `rails db:create && rails db:migrate`
     - run `rails db:seed`
     - Associations - Do not declare the relationship just yet. This will cause errors.
-        ***** Important! When using postgres for our database, we need to run rails db:create 
-        before migrating. Make sure you don't skip that step *****
+        ***** Important! When using postgres for our database, we need to run rails db:create & rails db:migrate 
+        before migrating. See above.  Make sure you don't skip that step *****
         Now that our model and table is setup, we should be able to create a new note in the console
     - git add/commit/push
         - go to github repo, click compare and merge request(green box)
