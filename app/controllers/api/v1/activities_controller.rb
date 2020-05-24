@@ -9,7 +9,7 @@ class Api::V1::ActivitiesController < ApplicationController
     def create
         activity = Activity.new(activities_params)
         if activity.save
-            render json: activity, status: :accepted
+            render json: ActivitiesSerializer.new(activity), status: :accepted
         else
             render json: {errors: activity.errors.full_messages}, status: :unprocessible_entity
         end
