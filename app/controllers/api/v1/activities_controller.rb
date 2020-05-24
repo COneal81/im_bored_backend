@@ -1,13 +1,15 @@
 class Api::V1::ActivitiesController < ApplicationController
+
     def index 
         activities = Activity.all 
-        render json: activities
+        render json: ActivitiesSerializer.new(activities)
+        #create a new instance of activities when it renders
     end
 
     def create
         activity = Activity.new(activities_params)
         if activity.save
-            render json: activity, status: :accepted
+            render json: ActivitiesSerializer.new(activity), status: :accepted
         else
             render json: {errors: activity.errors.full_messages}, status: :unprocessible_entity
         end
