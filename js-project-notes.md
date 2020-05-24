@@ -95,16 +95,17 @@ example for model holding the foreign key `rails g model Activity category:refer
 
 - [ ] 3. Fast JSON API Serializer
     - Add `gem 'fast_jsonapi'` to your Rails project's Gemfile and run `bundle install`
-    - Create Serializer classes
+    - this gem gives us access to rails g serializer <your_resource_name>
+    - Create Serializer classes 
       - `rails g serializer <your_resource_name>`
       - `rails g serializer <your_resource_name>`
     - Update Controller Actions
         ```ruby
-        class Api::V1::SyllabusesController < ApplicationController
+        class Api::V1::ActivitiesController < ApplicationController
           def index
-            @syllabuses = Syllabus.all
-            # render json: @syllabuses
-            render json: SyllabusSerializer.new(@syllabuses)
+            activities = Activity.all
+            # render json: activities
+            render json: ActivitiesSerializer.new(activity)
           end
         end
         ```

@@ -1,7 +1,9 @@
 class Api::V1::ActivitiesController < ApplicationController
+
     def index 
         activities = Activity.all 
-        render json: activities
+        render json: ActivitiesSerializer.new(activities)
+        #create a new instance of activities when it renders
     end
 
     def create
