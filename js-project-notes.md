@@ -89,7 +89,8 @@ example for model holding the foreign key `rails g model Activity category:refer
 
 
 - [X] 2. Controllers
-    - In your console run: `rails g controller api/v1/<your controller_name>` (Make sure you capitalize and the first letter of the controller name!)
+    - In your console run: `rails g controller api/v1/<your controller_name>` (Make sure you capitalize and the first letter of the controller name and it is plural!)
+    - example. `rails g controller api/v1/Categories`
     - Build relevant routes for MVP (ex: `index` and `create`)
     - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see JSON data
 
@@ -97,8 +98,8 @@ example for model holding the foreign key `rails g model Activity category:refer
     - Add `gem 'fast_jsonapi'` to your Rails project's Gemfile and run `bundle install`
     - this gem gives us access to rails g serializer <your_resource_name>
     - Create Serializer classes 
-      - `rails g serializer <your_resource_name>`
-      - `rails g serializer <your_resource_name>`
+      - `rails g serializer <your_resource_name>` capitialized and singular
+      - Example `rails g serializer Category`
     - Update Controller Actions
         ```ruby
         class Api::V1::ActivitiesController < ApplicationController
