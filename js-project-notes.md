@@ -155,7 +155,7 @@ Initial Setup
       - f. in terminal, choose 2nd option on github, 2nd line (`git push -u origin master`)
       Connect your API to your frontend!
  - [ ] 4a. in Gemfile, uncomment gem 'rack-cors', run bundle install
-      - a. in config/initializers/cors.rb uncomment the following code:
+      - a. in config/initializers/cors.rb uncomment the following code and change the orgin to *:
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins '*'
@@ -170,7 +170,7 @@ end
  - [ ] 7. We're eventually going to make a call to the index route of our API (ex: localhost:3000/api/v1/syllabuses). Run your rails server and visit that end point in the browser to confirm the expected JSON data is present.
  - [ ] 8. We can see the JSON data in the browser but in order to access it in our frontend, we'll need to setup Cross Origin Resource Sharing (CORS). In order to do this we'll need to do a couple things:
 Navigate to your Gemfile and uncomment gem 'rack-cors' then bundle install. You can read more about CORS in the PART 3 notes and here.
-Inside of config/initializers/cors.rb uncomment the CORS code and update origins 'example.com' to origins '*'
+
  - [ ] 9. Commit and push this code!
 Receive (GET) data from the server
 
