@@ -129,25 +129,25 @@ example for model holding the foreign key `rails g model Activity category:refer
 
 
 - [X] 4. **TEST:** Confirm data at your Rails endpoints! (ex: `http://imbored.com/api/v1/activities`)
-- [ ] 5. Build out your associated models using this same process. **REMEMBER: Focus on building vertically for MVP** this means only starting with 2 or 3 models before moving on to the frontend.
+- [X] 5. Build out your associated models using this same process. **REMEMBER: Focus on building vertically for MVP** this means only starting with 2 or 3 models before moving on to the frontend.
 
 
 ### PART 3: DOM Manipulation, Events, and Fetch using Rails API
 - **JS MANTRA:** When _some event_ happens, I want to make _what kind of_ fetch and then manipulate the DOM _in what way_?
 Initial Setup
 
- - [ ] 1. Create separate directory for frontend.  In terminal type `cd..` to go back to main terminal
+ - [X] 1. Create separate directory for frontend.  In terminal type `cd..` to go back to main terminal
         - a. mkdir im_bored_frontend
         - b. cd im_bored_frontend/
         - c. code .
- - [ ] 2. Create index.html file, 
+ - [X] 2. Create index.html file, 
        - a. in terminal type `touch index.html` 
        - b. Go to index.html and input basic html code
        - c. with script tag connecting your index.js. Ex: <script type="text/javascript" src="index.js"></script>
- - [ ] 3. Create src folder and in it create index.js, 
+ - [X] 3. Create src folder and in it create index.js, 
        - a. in terminal, type touch index.js (this will create a new file.  index.js is what will render the page for us, like an erb file in rails.)
        - b. console.log("in index.js"), and check for the logged message in your dev tools to confirm the index.html <> index.js connection was established.
- - [ ] 4. Initialize a git repo for frontend repository.
+ - [X] 4. Initialize a git repo for frontend repository.
       - a. name it the same as the backend.  ex. im_bored_backend and im_bored_frontend
       - b. in terminal, `git init`
       - c. in terminal, choose 2nd option on github, 1st line (`git remote add origin git@github.com:COneal81/im_bored_frontend.git`)
@@ -155,7 +155,7 @@ Initial Setup
       - e. in terminal, `git commit -m'Inital setup' `
       - f. in terminal, choose 2nd option on github, 2nd line (`git push -u origin master`)
       Connect your API to your frontend!
- - [ ] 4a. in Gemfile, uncomment gem 'rack-cors', run bundle install
+ - [X] 4a. in Gemfile, uncomment gem 'rack-cors', run bundle install
       - a. in config/initializers/cors.rb uncomment the following code and change the orgin to *:
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
@@ -166,23 +166,23 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
- - [ ] 5. Think about the JS mantra and answer this question: When the DOM Content is Loaded, I want to make a GET fetch and then manipulate the DOM in what way (usually render the data)?
- - [ ] 6. Create DOMContentLoaded event listener and console.log("loaded") as the event handler to confirm we've properly set up the listener.
- - [ ] 7. We're eventually going to make a call to the index route of our API (ex: localhost:3000/api/v1/syllabuses). Run your rails server and visit that end point in the browser to confirm the expected JSON data is present.
- - [ ] 8. We can see the JSON data in the browser but in order to access it in our frontend, we'll need to setup Cross Origin Resource Sharing (CORS). In order to do this we'll need to do a couple things:
+ - [X] 5. Think about the JS mantra and answer this question: When the DOM Content is Loaded, I want to make a GET fetch and then manipulate the DOM in what way (usually render the data)?
+ - [X] 6. Create DOMContentLoaded event listener and console.log("loaded") as the event handler to confirm we've properly set up the listener.
+ - [X] 7. We're eventually going to make a call to the index route of our API (ex: localhost:3000/api/v1/syllabuses). Run your rails server and visit that end point in the browser to confirm the expected JSON data is present.
+ - [X] 8. We can see the JSON data in the browser but in order to access it in our frontend, we'll need to setup Cross Origin Resource Sharing (CORS). In order to do this we'll need to do a couple things:
 Navigate to your Gemfile and uncomment gem 'rack-cors' then bundle install. You can read more about CORS in the PART 3 notes and here.
 
- - [ ] 9. Commit and push this code!
+ - [X] 9. Commit and push this code!
 Receive (GET) data from the server
 
- - [ ] 10. GET request
+ - [X] 10. GET request
 Create a new branch for GET implementation.
 Create your get____ function (ex: function getToys()) that will make a call to your index endPoint in your API, make your GET request inside the function and console.log the json data, then call your get___ function in the DOMContentLoaded event listener.
 Once you have confirmed your GET request is returning the JSON you were expecting, use that data to update the DOM.(see PART 3 notes for example)
 Once working: Commit and push this code! Then merge branch to master.
 Submit (POST) data to the server
 
- - [ ] 11. POST request
+ - [X] 11. POST request
 Create a new branch for POST implementation.
 Create form
 Create submit event listener
@@ -190,16 +190,16 @@ Create submit event handler to handle form data
 Create post_____ function
 Manipulate the DOM with "posted" JSON data
 Once working: Commit and push this code! Then merge branch to master.
- - [ ] 12. git pull on the master branch to get working GET and POST functionality.
+ - [X] 12. git pull on the master branch to get working GET and POST functionality.
 Refactor to make your code more DRY
 
- - [ ] 13. Make sure you're not repeating yourself unnecessarily in your code. Ex: Create a render function you can use in both your "read" and "create" functions.
+ - [X] 13. Make sure you're not repeating yourself unnecessarily in your code. Ex: Create a render function you can use in both your "read" and "create" functions.
  - [ ] 14. Build out any additional features using the JS Mantra: Event, Fetch, and DOM Manipulation flow as a guide.
 PART 4: OOJS Refactor
- - [ ] 1. IMPORTANT: Create a separate branch for your OOJS Refactor
- - [ ] 2. Create a JS Class (ex: class Syllabus)
- - [ ] 3. Link to the new JS file in your index.html (ex: <script type="text/javascript" src="src/syllabus.js"></script>)
- - [ ] 4. Create a constructor that pushes all instances of this into an empty array (See part 4 notes for example)
+ - [X] 1. IMPORTANT: Create a separate branch for your OOJS Refactor
+ - [X] 2. Create a JS Class (ex: class Syllabus)
+ - [X] 3. Link to the new JS file in your index.html (ex: <script type="text/javascript" src="src/syllabus.js"></script>)
+ - [X] 4. Create a constructor that pushes all instances of this into an empty array (See part 4 notes for example)
  - [ ] 5. Refactor render functionality by creating a render function in your JS class
  - [ ] 6. For future use, create a static method in your JS class that finds an object based on it's id. (In the PART 4 notes we see how this would be useful for 'update/PATCH' functionality)
 
@@ -214,3 +214,18 @@ PART 4: OOJS Refactor
 - [ ] You have a large number of small Git commits
 - [ ] Your commit messages are meaningful
 - [ ] You made the changes in a commit that relate to the commit message
+
+
+
+function renderActivities(activity) {
+    let allActivities = 
+    `<div data-id= ${activities.id}>
+    <h2>${activities.attributes.title}</h2>
+    <p>${activities.attributes.description}</p>
+    <p>Category: ${activities.attributes.category.category_name}</p>
+    <button data-id=${activities.id}> Edit </button>
+    </div>
+    <br><br>`
+
+    
+}

@@ -21,3 +21,6 @@ class Api::V1::ActivitiesController < ApplicationController
         params.require(:activity).permit(:title, :description, :category_id)
     end
 end
+
+
+
