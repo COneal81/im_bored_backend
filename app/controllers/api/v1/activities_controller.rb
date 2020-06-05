@@ -15,6 +15,16 @@ class Api::V1::ActivitiesController < ApplicationController
         end
     end
 
+    def edit 
+    end
+
+    def update
+        activity = Activity.find(params[:id])
+        activity.update(activities_params)
+        render json: ActivitiesSerializer.new(activity), status: :accepted
+    end
+
+
     private
 
     def activities_params
