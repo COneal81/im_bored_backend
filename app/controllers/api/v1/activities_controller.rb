@@ -24,7 +24,14 @@ class Api::V1::ActivitiesController < ApplicationController
         render json: ActivitiesSerializer.new(activity), status: :accepted
     end
 
-    
+
+    # def destroy
+    #     activity = Activity.find(params[:id])
+    #     activity.destroy
+    #     render json: ActivitiesSerializer.new(activity), status: :accepted
+    # end
+        
+
     private
 
     def activities_params
