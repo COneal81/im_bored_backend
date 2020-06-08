@@ -1,24 +1,20 @@
 # README
+Mom, I'm Bored!!! is an application that lists activities for kids to do.  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a portfolio project for the Javascript/Rails API section of the Flatiron School Web Development Online program.
 
-Things you may want to cover:
+Getting Started
 
-* Ruby version
+1. Clone the backend repo and then install the needed gems: $ bundle install
 
-* System dependencies
+2. CD into the directory.
 
-* Configuration
+3. Migrate the database: $ rake db:migrate
 
-* Database creation
+4. Clone the frontend repo at git@github.com:COneal81/im_bored_frontend.git
 
-* Database initialization
+5. CD into the directory.
 
-* How to run the test suite
+6. Run open index.html
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
