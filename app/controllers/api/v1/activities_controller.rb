@@ -1,6 +1,7 @@
 class Api::V1::ActivitiesController < ApplicationController
 
     def index 
+        # activities = Activity.all
         activities = Activity.order('created_at DESC')
         render json: ActivitiesSerializer.new(activities)
         #create a new instance of activities when it renders
